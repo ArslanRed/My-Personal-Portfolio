@@ -1,6 +1,6 @@
 const data =  [
     {
-            image : '/src/assets/venice.jpg',
+            image : '/venice.jpg',
             country : 'Italy',
             link : 'https://g.co/kgs/KRyQgCm',
             title:'Venice',
@@ -8,7 +8,7 @@ const data =  [
             description :'a city in northeastern Italy and the capital of the Veneto region. It is built on a group of 118 islands that are separated by expanses of open water.'
     },
     {
-            image : '/src/assets/dubai.jpg' ,
+            image : '/dubai.jpg' ,
             country : 'Dubai' ,
             link : 'https://g.co/kgs/nD3aV1P' ,
             title:'UAE' ,
@@ -16,7 +16,7 @@ const data =  [
             description :'A city and emirate in the United Arab Emirates, is known for its ultra-modern architecture, luxury shopping, and vibrant nightlife. Must visit if you have money'
     },
     {
-            image : '/src/assets/switzerland.jpg',
+            image : '/switzerland.jpg',
             country : 'Switzerland',
             link : 'https://g.co/kgs/4GBUZgg',
             title : 'Bern',

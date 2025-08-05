@@ -37,28 +37,28 @@ const GlassMorph = () => {
 
   const cardsSet1 = [
     {
-      img: '/src/components/circleanimated/laptop.avif',
+      img: '/laptop.avif',
       title: 'React',
       text: "I'm a Front-End Developer with solid experience in React, building responsive, component-based web applications.",
       buttonText: 'Learn More',
       variant: 'cardGlow'
     },
     {
-      img: '/src/assets/react.svg',
+      img: '/react.svg',
       title: 'Border Rotate',
       text: 'Shorter description.',
       buttonText: 'Read More',
       variant: 'rotateBorder'
     },
     {
-      img: '/src/assets/dubai.jpg',
+      img: '/dubai.jpg',
       title: 'Glow and Flicker',
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus commodi inventore nam?',
       buttonText: 'Submit',
       variant: 'CardWeld'
     },
     {
-      img: '/src/components/circleanimated/laptop.avif',
+      img: '/laptop.avif',
       title: 'Chasing Sparkle',
       text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus commodi inventore nam?',
       buttonText: 'Buy',
@@ -67,7 +67,7 @@ const GlassMorph = () => {
   ];
 
   const cardsSet2 = Array.from({ length: 4 }).map((_, index) => ({
-    img: '/src/assets/venice.jpg',
+    img: '/venice.jpg',
     title: 'Changed',
     text: 'You pressed the button to change us..!',
     buttonText: 'Explore',
