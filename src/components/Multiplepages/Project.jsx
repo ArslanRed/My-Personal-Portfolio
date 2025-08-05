@@ -1,4 +1,4 @@
-import React, {useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import ButtonGradient from "../button/ButtonGradient.jsx";
 import ScrollLazyWrapper from "../Multiplepages/ScrollLazyWrapper.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
@@ -14,49 +14,40 @@ const Windowmain = lazy(() => import("../window/Windowmain.jsx"));
 const StyleComponents = lazy(() => import("../circleanimated/StyleComponents.jsx"));
 const Pages = lazy(() => import("../pages/Pages.jsx"));
 
-const fallback = null;
+const fallback = (
+  <div className="lazy-loader">
+    <div className="spinner" />
+    <p>Loading...</p>
+  </div>
+);
 
 const Projects = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setIsVisible(true), 20);
+    const timeout = setTimeout(() => setIsVisible(true), 50);
     return () => clearTimeout(timeout);
   }, []);
+
   return (
     <section className={`projects-container fade-in ${isVisible ? "visible" : ""}`}>
       <div className="smallscreen">
         <ButtonGradient />
 
-        <ScrollLazyWrapper>
-          <ErrorBoundary>
-            <Suspense fallback={fallback}>
-              <ImageSlider />
-            </Suspense>
-          </ErrorBoundary>
-        </ScrollLazyWrapper>
+        {[ImageSlider, PersonalCheff, TravelJournal, Windowmain, StyleComponents, Pages].map((Component, index) => (
+          <ScrollLazyWrapper key={index}>
+            <ErrorBoundary>
+              <Suspense fallback={fallback}>
+                <Component />
+              </Suspense>
+            </ErrorBoundary>
+          </ScrollLazyWrapper>
+        ))}
 
         <ScrollLazyWrapper>
           <ErrorBoundary>
             <Suspense fallback={fallback}>
-              <PersonalCheff />
-            </Suspense>
-          </ErrorBoundary>
-        </ScrollLazyWrapper>
-
-        <ScrollLazyWrapper>
-          <ErrorBoundary>
-            <Suspense fallback={fallback}>
-              <TravelJournal />
-            </Suspense>
-          </ErrorBoundary>
-        </ScrollLazyWrapper>
-       
-        <ScrollLazyWrapper>
-          <ErrorBoundary>
-            
-            <Suspense fallback={fallback}>
-              <h1>My Components</h1>
+              <h2>My Components</h2>
               <div className="video-card">
                 <VideoCarousel />
                 <MovingCard />
@@ -64,32 +55,7 @@ const Projects = () => {
             </Suspense>
           </ErrorBoundary>
         </ScrollLazyWrapper>
-
-        <ScrollLazyWrapper>
-          <ErrorBoundary>
-            <Suspense fallback={fallback}>
-              <Windowmain />
-            </Suspense>
-          </ErrorBoundary>
-        </ScrollLazyWrapper>
-
-        <ScrollLazyWrapper>
-          <ErrorBoundary>
-            <Suspense fallback={fallback}>
-              <StyleComponents />
-            </Suspense>
-          </ErrorBoundary>
-        </ScrollLazyWrapper>
-
-        <ScrollLazyWrapper>
-          <ErrorBoundary>
-            <Suspense fallback={fallback}>
-              <Pages />
-            </Suspense>
-          </ErrorBoundary>
-        </ScrollLazyWrapper>
       </div>
-      
     </section>
   );
 };
