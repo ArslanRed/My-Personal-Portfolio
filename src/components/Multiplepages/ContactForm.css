@@ -1,23 +1,38 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Optional: centers vertically if section has height */
+  text-align: center; /* Ensures text inside is centered */
+  padding: 40px 20px; /* Some spacing */
+}
 
 .formData{
     display: flex;
 }
 .contact-info {
- 
-  flex: 1 300px;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto; 
   max-width: 500px;
 }
 .contact-info h2 {
   font-size: 2.5rem;
   margin-bottom: 16px;
-  color: #fff;
+  color: #9d4edd;
 }
 
 .contact-info p {
   font-size: 1.05rem;
   color: #ccc;
   line-height: 1.6;
+  max-width: 500px; /* ✅ Consistent block width */
+  margin: 0 auto;   /* ✅ Center it horizontally */
+  text-wrap: balance;  
 }
+
 @media (max-width:600px) {
  .contact-info{ margin: 80px auto; }
   .formData{margin-top: -80px;}

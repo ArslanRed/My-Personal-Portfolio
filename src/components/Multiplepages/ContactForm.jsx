@@ -7,11 +7,14 @@ const ContactForm = () => {
   return (
     <section>
              <div className="contact-info">
+              <div>
           <h2>Let's Connect</h2>
+          </div>
+          <div>
           <p>
             I believe great things happen through collaboration and communication. Whether you’re interested in discussing a potential project, exploring ideas, or simply want to share feedback, I’m always open to meaningful conversations.
             Feel free to reach out for collaborations, projects, or just a quick hello!</p>
-          
+          </div>
         </div>
       <div className='formData'>
       <MovingCard/>
