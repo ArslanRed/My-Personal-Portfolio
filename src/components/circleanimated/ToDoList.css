@@ -21,10 +21,9 @@
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
   .list-container{
-    
-    width: 345px;
+    width: 355px;
     padding: 0px 10px;
     text-align: left;
   }
