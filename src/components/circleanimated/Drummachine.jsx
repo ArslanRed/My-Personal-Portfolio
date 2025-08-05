@@ -61,9 +61,9 @@ const DrumMachine = () => {
 
 const styles = {
   container: {
-    width: '350px',
-  height: '400px',
-    margin: "50px auto",
+    width: '340px',
+   height: '400px',
+    margin: "20px auto",
     backgroundColor: "#1e1e2f",
     borderRadius: "10px",
     padding: "10px",
@@ -75,7 +75,7 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "15px",
-    marginBottom: "20px"
+    marginBottom: "40px"
   },
   drumPad: {
     backgroundColor: "#6c636eff",

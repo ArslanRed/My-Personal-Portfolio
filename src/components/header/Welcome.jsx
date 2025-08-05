@@ -169,7 +169,7 @@ requestAnimationFrame(updateClock);
     🔔</div>
     {hasNewMessage && <span className="bell-indicator"></span>}
     </div>
-    <div class="signal-bars">
+    <div className="signal-bars">
             <span></span>
             <span></span>
             <span></span>

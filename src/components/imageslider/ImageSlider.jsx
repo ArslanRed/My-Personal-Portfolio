@@ -50,10 +50,10 @@ const Section = styled.div`
 
 const HeadMe = styled.h3`
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 
   @media screen and (max-width: 600px) {
-    margin-top: 90px;
+    margin-top: 0px;
   }
 `;
 

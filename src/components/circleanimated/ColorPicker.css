@@ -16,7 +16,7 @@
   align-items: center;
   border: 5px solid hsl(0,0%,80%);
   border-radius: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   transition: 0.25s ease;;
 }
 .color-display p {

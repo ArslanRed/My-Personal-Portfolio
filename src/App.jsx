@@ -13,7 +13,7 @@ function App() {
   const changeTheme = () => setDarkMode(!darkMode);
 
   return (
-    <div className={darkMode ? 'dark' : 'light'}>
+    <div className={darkMode ? 'dark' : 'light'}  style={{height:'100vh'}}>
       <Router>
         
           <Header />

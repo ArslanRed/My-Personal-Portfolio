@@ -32,6 +32,12 @@ const Projects = () => {
   return (
     <section className={`projects-container fade-in ${isVisible ? "visible" : ""}`}>
       <div className="smallscreen">
+        <div className="projects-intro">
+        <h2>My Work</h2>
+        <p>
+          Here’s a collection of my featured projects and custom-built components. Each of these reflects my approach to clean UI, thoughtful interaction, and modern web development.
+        </p>
+      </div>
         <ButtonGradient />
         
         {[ImageSlider, PersonalCheff, TravelJournal, Windowmain, StyleComponents, Pages].map((Component, index) => (
