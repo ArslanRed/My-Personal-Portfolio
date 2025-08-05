@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2.5rem; /* same as mt-10 */
+  margin-top: 1rem; /* same as mt-10 */
   
 }
 .slides-container {
