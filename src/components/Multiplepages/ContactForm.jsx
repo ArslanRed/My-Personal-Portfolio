@@ -13,7 +13,7 @@ const ContactForm = () => {
           <div>
           <p>
             I believe great things happen through collaboration and communication. Whether you’re interested in discussing a potential project, exploring ideas, or simply want to share feedback, I’m always open to meaningful conversations.
-            Feel free to reach out for collaborations, projects, or just a quick hello!</p>
+            <strong style={{fontWeight:'bold', color:'rgba(139, 203, 238, 1)'}}>Feel free to reach out for collaborations, projects, or just a quick hello! </strong></p> 
           </div>
         </div>
       <div className='formData'>
