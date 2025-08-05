@@ -33,7 +33,7 @@ const Projects = () => {
     <section className={`projects-container fade-in ${isVisible ? "visible" : ""}`}>
       <div className="smallscreen">
         <ButtonGradient />
-
+        
         {[ImageSlider, PersonalCheff, TravelJournal, Windowmain, StyleComponents, Pages].map((Component, index) => (
           <ScrollLazyWrapper key={index}>
             <ErrorBoundary>
@@ -47,7 +47,6 @@ const Projects = () => {
         <ScrollLazyWrapper>
           <ErrorBoundary>
             <Suspense fallback={fallback}>
-              <h2>My Components</h2>
               <div className="video-card">
                 <VideoCarousel />
                 <MovingCard />

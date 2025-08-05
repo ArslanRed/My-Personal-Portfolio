@@ -3,6 +3,9 @@ import './Window.css';
 
 const Window = ({ heading, description, caption, skills }) => {
   return (
+    <div>
+      <h2>My Components</h2>
+    
     <section className="section">
       <h2 className="heading">{heading}</h2>
       <p className="description">{description}</p>
@@ -23,6 +26,7 @@ const Window = ({ heading, description, caption, skills }) => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

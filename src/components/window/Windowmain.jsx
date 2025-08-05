@@ -55,6 +55,7 @@ const skillSections = [
 
   return (
       <div className="window-containers">
+        
       <div className="window-left">
         <div className="window-item">
           <Window
