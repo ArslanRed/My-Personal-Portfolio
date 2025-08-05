@@ -1,0 +1,105 @@
+.about-container {
+  padding: 30px 20px;
+ 
+  background: radial-gradient(circle at center, rgba(121, 49, 136, 0.322), transparent 70%);
+  color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 35px rgba(241, 239, 239, 0.911);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.about-text:hover {
+  transform: scale(1.015);
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+.about-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #cccccc;
+  margin-bottom: 35px;
+}
+
+.about-text h2 {
+  margin-top: 40px;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid #444;
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.about-text li {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: 500;
+  color: #eaeaea;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-text li::before {
+  content: '✓';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00ffc8;
+  font-weight: bold;
+}
+
+.about-text li:hover {
+  background: linear-gradient(135deg, #36153d, #92fe9d);
+  color: #111;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(61, 99, 110, 0.973);
+  cursor: default;
+}

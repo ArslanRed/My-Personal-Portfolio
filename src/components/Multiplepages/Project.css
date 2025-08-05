@@ -1,0 +1,48 @@
+.projects-container {
+  color: #fff;
+  padding: 0px 20px;
+  text-align: center;
+  animation: fadeInSlow 1.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeInSlow {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Stagger children for cascading effect */
+.projects-container > div > * {
+  opacity: 0;
+  animation: fadeChild 1s ease-out forwards;
+  animation-delay: calc(var(--i, 0) * 0.2s);
+}
+
+@keyframes fadeChild {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-card{
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+@media (max-width:900px) {
+  .video-card{
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+.lazy-loader {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #aaa;
+}

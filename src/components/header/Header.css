@@ -1,0 +1,136 @@
+header {
+  display: flex;
+  justify-content: space-between;
+ background-color: #1a1a1a;
+background-image: 
+  repeating-linear-gradient(45deg, rgba(14, 13, 13, 0.03) 0, rgba(15, 15, 15, 0.03) 1px, transparent 1px, transparent 5px),
+  repeating-linear-gradient(-45deg, rgba(37, 36, 36, 0.03) 0, rgb(7, 7, 7) 1px, transparent 1px, transparent 5px);
+backdrop-filter: blur(10px);
+  padding: 4px;
+  margin-bottom: 2%;
+  align-items: center;
+  z-index: 1000;
+
+}
+
+.imgtext-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.my-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.div-btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-right: 5px;
+}
+
+/* Make nav link text white */
+.nav-home a,
+.nav-projects a,
+.nav-about a,
+.nav-contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Base link style */
+.nav-home a,
+.nav-projects a,
+.nav-about a,
+.nav-contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+/* Gradient text on hover using background-clip */
+.nav-home a:hover,
+.nav-projects a:hover,
+.nav-about a:hover,
+.nav-contact a:hover {
+  background: linear-gradient(90deg, #cf8af0, #9d9bec,rgb(228, 185, 185), rgb(224, 224, 149), rgb(196, 196, 197), rgb(250, 204, 118));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(243, 243, 243);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  header {
+    position: fixed;
+    width: 98%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger:hover {
+    color: black;
+    background-color: rgb(120, 121, 120);
+    border-radius: 10px;
+    transform: transition 0.5s ease-in;
+  }
+
+  .div-btn {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 1px;
+    background: rgba(56, 54, 54, 0.918);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 25px;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .div-btn.open {
+    display: flex;
+  }
+
+  .div-btn button {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .div-btn button:hover {
+    font-size: 1.1rem;
+  }
+}

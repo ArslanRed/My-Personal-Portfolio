@@ -1,0 +1,19 @@
+.style-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .style-wrapper {
+    flex-direction: column;
+  }
+}
+.clockDiv{
+   display: flex;
+   gap: 40px;
+   justify-content: center;
+}
+

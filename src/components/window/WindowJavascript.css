@@ -1,0 +1,150 @@
+.section2 {
+  max-width: 640px;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  position: relative;
+  background: linear-gradient(90deg, #312c0c, #374863, #020617);
+  overflow: hidden;
+
+}
+.cursor-light2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(135, 134, 136, 0.993) 0%, transparent 50%);
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.08s ease, left 0.08s ease;
+  z-index: 0;
+}
+
+
+.heading2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.description2 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+.card-container2 {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2rem;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.08);
+}
+.glow2{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from 51deg,
+    rgb(0, 0, 0) 0deg,
+    rgb(36, 31, 26) 4deg,
+    transparent 8deg
+  );
+
+}
+
+
+@keyframes lighMode {
+  0% {
+    opacity: 0.4;
+    transform: translateX(-50%) scaleX(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateX(-50%) scaleX(1.2);
+  }
+}
+
+.command-box2 {
+  position: relative;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  margin-bottom: 1rem;
+}
+
+.command-title2 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.command-item2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease; 
+  cursor: pointer;
+}
+
+.command-item2:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.shortcut2 {
+  
+  font-size: 0.875rem;
+  background: #8d8d8d;
+  color: #000;
+  height: fit-content;
+  line-height: 1;       
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(5, 5, 5, 0.5);
+  transition: background 0.3s ease;
+}
+.shortcut2:hover{
+  background-color: #2f302f;
+}
+
+.card-caption2 {
+  position: relative;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  text-align: center;
+  z-index: 3;
+}
+
+.card-caption2 strong {
+  color: #b0b301;
+  font-weight: 600;
+}

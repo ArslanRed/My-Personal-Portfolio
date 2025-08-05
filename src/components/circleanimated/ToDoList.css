@@ -1,0 +1,125 @@
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.list-container {
+  animation: slideInLeft 1.2s ease forwards;
+  background: rgba(40, 40, 50, 0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 20px 30px;
+  box-shadow: 0 20px 40px rgba(128, 128, 255, 0.2);
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media screen and (max-width: 400px){
+  .list-container{
+    
+    width: 345px;
+    padding: 0px 10px;
+    text-align: left;
+  }
+ 
+}
+.myHeading {
+  font-size: 3.2rem;
+  color: #f3e9d2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.myinput {
+  font-size: 1.2rem;
+  padding: 12px 18px;
+  border: 2px solid rgba(200, 200, 200, 0.3);
+  border-radius: 8px;
+  background-color: rgba(20, 20, 30, 0.6);
+  color: #f1f1f1;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+.myinput:focus {
+  border-color: #8ab4f8;
+}
+
+.add-button,
+.delete-button,
+.move-button {
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+.add-button {
+  background: linear-gradient(145deg, #1f883d, #2ecc71);
+}
+.add-button:hover {
+  background: linear-gradient(145deg, #1a7233, #27ae60);
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background: linear-gradient(145deg, #c0392b, #e74c3c);
+}
+.delete-button:hover {
+  background: linear-gradient(145deg, #962d22, #d9392f);
+  transform: translateY(-1px);
+}
+
+.move-button {
+  background: linear-gradient(145deg, #2980b9, #3498db);
+}
+.move-button:hover {
+  background: linear-gradient(145deg, #236a98, #2c80c5);
+  transform: translateY(-1px);
+}
+
+.orderedList {
+  padding-left: 0;
+  list-style: none;
+}
+
+.listItems {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 16px 20px;
+  background: rgba(30, 30, 40, 0.8);
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  color: #eaeaea;
+  transition: background 0.3s ease;
+}
+
+.listItems:hover {
+  background: rgba(60, 60, 70, 0.9);
+}
+
+.taskTexts {
+  flex: 1;
+  text-align: left;
+  padding-right: 15px;
+  word-break: break-word;
+}

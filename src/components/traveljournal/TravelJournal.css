@@ -1,0 +1,101 @@
+.parent{
+     
+     margin-top: 10px;
+}
+@media screen and (min-width: 900px)
+{
+  .parent{
+    margin:40px auto;
+    max-width: 810px;
+  }
+}
+@media screen and (max-width: 600px){
+  .parent{
+    perspective: 1000px;
+    
+    align-items: center;
+  }
+}
+.main-container{
+    color: black;
+    text-align: center;
+    border: 2px solid rgb(107, 107, 106);
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.travel-header{
+    color: beige;
+    border: 2px solid rgb(87, 87, 77);
+    border-radius: 10px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(218, 164, 164);
+ 
+}
+.wrap-form {
+  color: rgb(5, 5, 5);
+  font-weight: bold;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px;
+  background-color: #eef2ff;
+  border-radius: 16px;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+/* Inputs and textarea styling */
+.wrap-form input,
+.wrap-form textarea {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  
+  transition: border-color 0.3s ease;
+}
+@media (min-width: 1024px) {
+  .wrap-form {
+    max-width: 500px;
+    padding: 32px;
+    margin-left: 0 auto;
+  }
+}
+
+
+
+.wrap-form input:focus,
+.wrap-form textarea:focus {
+  border-color: #6366f1;
+ 
+  box-shadow: 4px 5px 10px 2px #304599;
+}
+
+/* Textarea specifically */
+.wrap-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+.wrap-form button {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #4f46e5;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.wrap-form button:hover {
+  background-color: #4338ca;
+}

@@ -1,0 +1,196 @@
+import React, {useState } from 'react'
+import './HandleEvents.css'
+
+
+
+const HandleEvents = () => {
+  //  const arr = [1 , 2 , 5 , 6 , 8]
+  //  const stringsArr = ["abas", "ali" , "hello"]
+  //  const newString = stringsArr.map((text,i) => {
+  //   return text[0].toUpperCase() + text.slice(1) + " ";
+  //  })
+  //  const newArr = arr.map((number , i) =>
+  //               {
+  //                return  number * number + " "
+  //               })
+const [listItems, setListItems] =  useState([ "Mango", "Banana", "Apple"])
+ const [buttonText, setButtonText] = useState('Submit')
+ const [inputValue, setInputValue] = useState('')
+  function handleHover () 
+  {
+     buttonText == "Submit" ? setButtonText("Mouse Hovered"): setButtonText("Submit")
+  }
+   const handleInput=(e) => {
+    setInputValue(e.target.value)
+  }
+  const submitItem =()=> {
+    if (inputValue.trim()==='') return;
+    setListItems([...listItems,inputValue])
+    setInputValue('')
+  }
+  
+ //----------------------------------
+  const [buttonA, setButtonA] = useState('Yes')
+  const [count , setCount] = useState(0)
+  const clickTheButton=()=>{
+    buttonA ==='Yes' ? setButtonA('No'): setButtonA('Yes')
+  } 
+  const increase = () => {
+    setCount(prev => prev + 1)
+  }
+   const decrease = () => {
+    setCount(prev => prev -1)
+  }
+
+  const [isGoing , setIsGoing]= useState(true)
+  const changeMind =()=> setIsGoing(!isGoing)
+
+
+  const [myFavThings, setMyFavThings] = useState(["Apple" , "banana", "mango"])
+  const [myVal , setMyVal] = useState()
+
+  const inputME=(e) => {
+    setMyVal(e.target.value)
+  }
+  function addFav () {
+    if (myVal.trim() === '') return;
+       setMyFavThings(prev => [...prev, myVal]);
+       setMyVal('');
+  }
+
+  const [contact, setContact] = useState({
+    name: 'John',
+    lastName: 'Khan',
+    phone: '+92 3441895040',
+    email: 'Me@you.com',
+    linkImg : '/src/assets/react.svg',
+    isOne: true
+  })
+  
+  const changePhoto =() => {
+    setContact( prev => 
+    (
+      {
+      ...prev , linkImg: prev.isOne? '/src/assets/replay.svg': '/src/assets/react.svg' ,
+      isOne: !prev.isOne
+      }
+    ))
+  }
+  
+  return (
+    <>
+
+    <div style={{margin:'10%', padding:'40px', border:'2px solid white', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', width:'fit-content', gap:'40px' , backgroundColor:'rgb(10,20,40)'}}>
+
+      <img width={150} height={150} style={{borderRadius:'50%'}}  src='/src/assets/dubai.jpg'/>
+
+     <div>
+      <button onClick={changePhoto} style={{ background:'none' }}>
+      <img width={30} height={30} src={contact.linkImg} alt="icon" />
+      </button>
+      <h1>{contact.name} {contact.lastName}</h1>
+      <p>{contact.phone}</p>
+      <p>{contact.email}</p>
+      
+     
+      </div>
+
+    </div>
+
+    <div className='eventClick'>
+       <button onClick={changeMind}
+        aria-label={`Current Answer is ${isGoing? 'Yes' : 'No'} Click to change answer`}
+       >{isGoing? 'Yes' : 'No'} </button>
+      
+        <input onChange={inputME} 
+               placeholder='enterNew'
+               value={myVal}/>
+       <button style={{margin:'2px'}} onClick={addFav}>Add Fav thing </button>
+         {myFavThings.map((items, index) => <p key={index}> {items}</p>)}
+       
+      <img 
+      src='/src/assets/venice.jpg' alt='image of venice'/>
+
+      <input 
+      type='text' placeholder='Enter Something' 
+      value={inputValue}
+      onChange={handleInput}/>
+
+      <button 
+      onMouseOver={handleHover} 
+      onClick={submitItem}>
+      {buttonText} 
+      </button>
+
+      <ol>
+        {listItems.map((item, index) =>
+        (
+          <li key={index}> {item}</li>
+        ))}
+      </ol>
+     
+        {/* <p>{newArr}</p>
+        <p> {newString}</p> */}
+    </div>
+    <div className='eventClick'>
+          
+          <h1>Change the State</h1>
+          
+            
+            <button style={{borderRadius:'50%',
+            padding:'30px',
+            fontSize:'1.5rem',
+            width:'fit-content',
+            fontWeight:'bold',
+            border:'none'
+          }}
+          onClick={clickTheButton}>
+            {buttonA} 
+          </button >
+           <button style={{borderRadius:'50%',
+            padding:'30px',
+            fontSize:'1.5rem',
+            width:'fit-content',
+            fontWeight:'bold',
+            border:'none'
+          }}
+          onClick={clickTheButton}>
+            {count}2
+          </button >
+          
+         <div > 
+          <button 
+            onClick={decrease}
+            style={{borderRadius:'50%',
+            padding:'14px',
+            fontSize:'2rem',
+            width:'fit-content',
+            fontWeight:'bold',
+            border:'none'}}
+            >
+              -
+            </button> 
+            <button 
+            onClick={ increase}
+            style={{borderRadius:'50%',
+            padding:'12px',
+            fontSize:'2rem',
+            width:'fit-content',
+            fontWeight:'bold',
+            border:'none' }}
+            
+            >+</button>
+         </div>
+          
+    </div>
+
+    {/* <div className="octagon-wrapper">
+  <div className="octagon">Helloo</div>
+</div> */}
+    </>
+  )
+}
+
+       
+    
+export default HandleEvents

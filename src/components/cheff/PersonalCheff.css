@@ -1,0 +1,183 @@
+.MainContainer
+{
+    border: 2px solid rgb(70, 69, 69);
+    padding: 4px;
+    
+ 
+    box-shadow: 0 6px 20px rgba(231, 225, 225, 0.25);
+    border-radius: 5px;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border:none;
+}
+
+.HeaderContainer{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #e9b9f5, #bcf5f2);
+    margin: 0;
+    border-radius: 3px;
+    margin-bottom: 35px;
+}
+.HeaderContainer > img{
+    height: auto;
+    width: 90px;
+    margin-bottom: 6px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.headerHeading{
+    margin-left: -18px;
+    color: rgb(54, 52, 52);
+}
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+    height: 38px;
+}
+.inputContainer >input{
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    padding: 9px 13px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    min-width: 120px;
+    max-width: 350px;
+    font-size: 1rem;
+    color: white;
+    background: linear-gradient(rgb(53, 50, 50),rgb(0, 13, 39));
+   
+}
+.inputContainer >button{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    font-weight: bold;
+    width: 150px;
+    min-width: 105px;
+    font-size: 1rem;
+}
+.inputContainer > button:hover{
+  background-color: #3b3b3a;
+}
+.inputContainer > button::before {
+    content: "+";
+    font-size: larger;
+    margin-right: 5px;
+}
+.contentContainer{
+    margin-left: 12px;
+    color:rgb(243, 238, 238);
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInDown 0.7s ease forwards !important;
+}
+.contentContainer h1, ul , li {
+   animation: fadeInDown 0.6s ease forwards !important;
+}
+.functionContainer {
+  display: flex; /* ✅ Needed for layout */
+  flex-direction: row; /* or column if you prefer vertical layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 100%; 
+  height: auto; /* Changed from fixed height */
+  gap: 20px; /* Optional: adds spacing between text and button */
+  flex-wrap: nowrap; /* Prevent overflow on smaller screens */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.8s ease forwards;
+   background: linear-gradient(to right,  #bcf5f2, #e9b9f5);
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.textSection h3 {
+  margin: 0 0 6px 0; /* heading margin bottom small */
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #222;
+}
+
+.textSection p {
+  margin: 0;
+  color: #0f0f0f;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.recipeButton {
+  background-color: #c3694f;  
+  border: none;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  min-width: 105px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+@media screen and (min-width: 900px)
+{
+  .MainContainer{
+    margin: 0 auto;
+    max-width: 800px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 400px)
+{
+  .recipeButton{
+    padding: 7px;
+    font-weight: bolder;
+  }
+}
+.recipeButton:hover {
+  background-color: #a4533c;
+}
+
+.suggested-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+ 
+}
+.contentContainer ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  text-align: left;
+  margin: 0;
+}
+
+.contentContainer li {
+  text-align: left;
+}
+.suggestion-button {
+  color: white;
+  font-weight: bold;
+   background: linear-gradient(to right,  #af8bb3, #3dbabe);
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.suggestion-button:hover {
+  transform: scale(1.1);
+}

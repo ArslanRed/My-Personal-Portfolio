@@ -1,0 +1,107 @@
+/* VideoCarousel.css */
+
+.carousel-container {
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem; /* same as mt-10 */
+  
+}
+.slides-container {
+  display: flex;
+  width: 100%;
+  transition: transform 0.7s ease-in-out;
+}
+
+.slides-container video {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Remove position:absolute & opacity styles if present */
+  position: relative !important;
+  opacity: 1 !important;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  border-radius: 1.5rem; /* rounded-3xl */
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+@media (max-width: 768px) {
+  .video-wrapper {
+    height: 250px; /* smaller height for small screens */
+  }
+}
+@media (max-width: 470px) {
+  .video-wrapper {
+    height: 150px; /* smaller height for small screens */
+  }
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.video-wrapper video.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.restart-button {
+  margin-top: .5rem; /* mt-6 */
+  padding: 0.5rem 1.5rem; /* px-6 py-2 */
+  background-color: #1f2937; /* bg-gray-800 */
+  color: white;
+  border-radius: 9999px; /* rounded-full */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  
+}
+
+.restart-button img {
+  width: 1.25rem; /* w-5 */
+  height: 1.25rem; /* h-5 */
+  margin-right: 0.5rem; /* mr-2 */
+}
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1; 
+  margin-right: 25%;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.active-dot {
+  background-color: #fff;
+  transform: scale(1.3);
+}
+

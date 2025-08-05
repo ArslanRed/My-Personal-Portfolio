@@ -1,0 +1,41 @@
+.contact-container{
+     flex: 1 1 250px; /* Grow/Shrink, and base width */
+      max-width: 300px;
+      border-radius: 5%;
+      padding: 1%;
+      margin: 1%;
+      box-sizing: border-box;
+
+   
+}
+.card-each{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-container:hover{
+   box-shadow: 0 4px 12px rgba(196, 131, 131, 0.938); 
+   transition: box-shadow 1s ease;
+   
+}
+.card-each>img{
+    width:100%;
+    height: auto;
+    padding: 2px;
+    border-radius: 20px;
+}
+.card-each>p{
+  
+  margin: 3px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  
+}
+.card-each svg {
+  vertical-align: middle;
+
+}

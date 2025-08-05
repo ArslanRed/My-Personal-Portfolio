@@ -1,0 +1,24 @@
+.window-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.window-right{
+  display: flex;
+}
+@media (max-width:800px){
+  .window-right{
+    flex-direction: column;
+    
+  }
+}
+@media screen and (max-width: 400px){
+  .window-containers{
+    perspective: 1000px;
+    width: 340px;
+    align-items: center;
+  }
+}

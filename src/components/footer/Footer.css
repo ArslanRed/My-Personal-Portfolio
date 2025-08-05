@@ -1,0 +1,74 @@
+.myfoot{
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  
+}
+.footer {
+  width: 100%;
+  text-align: center;
+   background-color: #1a1a1a;
+  background-image: 
+  repeating-linear-gradient(45deg, rgba(14, 13, 13, 0.03) 0, rgba(15, 15, 15, 0.03) 1px, transparent 1px, transparent 5px),
+  repeating-linear-gradient(-45deg, rgba(37, 36, 36, 0.03) 0, rgb(7, 7, 7) 1px, transparent 1px, transparent 5px);
+  backdrop-filter: blur(10px);
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+ 
+}
+
+
+.footer-brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.95rem;
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #8c6dfd;
+  transform: translateY(-2px);
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.footer-icons a {
+  color: #ccc;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #8c8ce6;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  font-size: 0.85rem;
+  color: #adadad;
+  font-weight: bold;
+  margin-top: 10px;
+}

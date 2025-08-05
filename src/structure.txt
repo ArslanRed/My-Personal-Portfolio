@@ -1,0 +1,129 @@
+Folder PATH listing for volume Software
+Volume serial number is 1E73-DA1B
+D:.
+|   App.css
+|   App.jsx
+|   index.css
+|   main.jsx
+|   structure.txt
+|   
++---assets
+|       dubai.jpg
+|       freepik__the-style-is-candid-image-photography-with-natural__67852.png
+|       highlight-first.mp4
+|       hightlight-fourth.mp4
+|       hightlight-sec.mp4
+|       hightlight-third.mp4
+|       index.js
+|       react.svg
+|       replay.svg
+|       sliderimage1.png
+|       sliderimage2.png
+|       sliderimage3.png
+|       sliderimage4.png
+|       sliderimage5.png
+|       switzerland.jpg
+|       venice.jpg
+|       
+\---components
+    |   highLightsSlides.js
+    |   VideoCarousel.css
+    |   VideoCarousel.jsx
+    |   
+    +---article
+    |       Article.css
+    |       Article.jsx
+    |       
+    +---button
+    |       Button.css
+    |       Button.jsx
+    |       ButtonGradient.jsx
+    |       ButtonSvg.jsx
+    |       
+    +---Cards
+    |       MovingCard.css
+    |       MovingCard.jsx
+    |       
+    +---cheff
+    |       Cheffdata.jsx
+    |       cheffHat.webp
+    |       chefflogo.jpg
+    |       PersonalCheff.css
+    |       PersonalCheff.jsx
+    |       
+    +---circleanimated
+    |       CircleButton.css
+    |       CircleButton.jsx
+    |       GlassMorph.css
+    |       GlassMorph.jsx
+    |       laptop.avif
+    |       StyleComponents.jsx
+    |       
+    +---contact
+    |       Contact.css
+    |       Contact.jsx
+    |       ContactCard.module.css
+    |       ContactCards.jsx
+    |       
+    +---content
+    |       Content.css
+    |       Content.jsx
+    |       
+    +---eventHandlers
+    |       Form.jsx
+    |       HandleEvents.css
+    |       HandleEvents.jsx
+    |       previousHandleEvents.txt
+    |       Soundpads.jsx
+    |       
+    +---footer
+    |       Footer.css
+    |       Footer.jsx
+    |       
+    +---header
+    |       arslan.jpeg
+    |       Header.css
+    |       Header.jsx
+    |       Mynoise.jpg
+    |       texture.png
+    |       Welcome.css
+    |       Welcome.jsx
+    |       
+    +---imageslider
+    |       ImageSlider.jsx
+    |       
+    +---Multiplepages
+    |       About.css
+    |       About.jsx
+    |       Contact.css
+    |       Contact.jsx
+    |       Home.jsx
+    |       Project.css
+    |       Project.jsx
+    |       
+    +---pages
+    |       pages.css
+    |       Pages.jsx
+    |       
+    +---sidemenu
+    |       SideMenu.css
+    |       SideMenu.jsx
+    |       
+    +---traveljournal
+    |       TravelData.js
+    |       Travelform.jsx
+    |       TravelJournal.css
+    |       TravelJournal.jsx
+    |       
+    \---window
+            CursorVortex.jsx
+            vortex.css
+            Windomain.css
+            Window.css
+            Window.jsx
+            WindowJavascript.css
+            WindowJavascript.jsx
+            Windowmain.jsx
+            Windowother.jsx
+            Windowtwo.css
+            
