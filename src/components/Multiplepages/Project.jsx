@@ -31,7 +31,7 @@ const Projects = () => {
 
   return (
     <section className={`projects-container fade-in ${isVisible ? "visible" : ""}`}>
-      <div className="smallscreen">
+      
         <div className="projects-intro">
         <h2>My Work</h2>
         <p>
@@ -60,7 +60,7 @@ const Projects = () => {
             </Suspense>
           </ErrorBoundary>
         </ScrollLazyWrapper>
-      </div>
+     
     </section>
   );
 };

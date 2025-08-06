@@ -1,11 +1,9 @@
-.projects-container {
-  color: #fff;
-  padding: 10px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
-  min-height: 100vh;
+.projects-container > *:not(.projects-intro):not(.video-card) {
+  display: block;
+  max-width: 900px; /* You can adjust this */
+  width: 100%;
+  margin: 20px auto; /* Centers horizontally */
+  box-sizing: border-box;
 }
 
 .projects-container.visible {
@@ -15,6 +13,7 @@
 @media (max-width:600px){
   .projects-container{
     margin-top: 40px;
+   
   }
 }
 
@@ -24,6 +23,7 @@
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+   max-width: 900px;
 }
 
 .projects-intro {

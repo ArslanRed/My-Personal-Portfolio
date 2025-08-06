@@ -15,10 +15,9 @@ const ImageSlider = () => {
 
   return (
     <Section>
-      <HeadMe>My Websites</HeadMe>
       <StyledSwiper
         modules={[Autoplay, Pagination]}
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={1}
         loop={true}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -45,21 +44,13 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  overflow: hidden;
-`;
-
-const HeadMe = styled.h3`
-  text-align: center;
-  margin-top: 10px;
-
-  @media screen and (max-width: 600px) {
-    margin-top: 0px;
-  }
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const StyledSwiper = styled(Swiper)`
-  max-width: 1100px;
   width: 100%;
+  max-width: 1100px;
   margin-bottom: 5%;
 
   .swiper-pagination {
@@ -71,10 +62,21 @@ const StyledSwiper = styled(Swiper)`
       background: rgba(164, 233, 164, 1);
       opacity: 1;
       margin: 0 5px;
+      transition: all 0.3s ease;
     }
 
     .swiper-pagination-bullet-active {
       background: white;
+      transform: scale(1.2);
+    }
+  }
+
+  /* ✅ Adjust bullets for small screens */
+  @media (max-width: 600px) {
+    .swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      margin: 0 3px;
     }
   }
 `;
@@ -100,8 +102,16 @@ const Wrap = styled.div`
     object-fit: cover;
     border-radius: 10px;
 
-    @media (min-width: 1024px) {
-      height: 400px;
+    @media (max-width: 1024px) {
+      max-height: 350px;
+    }
+
+    @media (max-width: 768px) {
+      max-height: 280px;
+    }
+
+    @media (max-width: 480px) {
+      max-height: 200px;
     }
   }
 
